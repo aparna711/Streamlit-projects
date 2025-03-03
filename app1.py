@@ -14,7 +14,7 @@ st.title("AI-Powered Resume Generator")
 import google.generativeai as genai
 
 # Configure Gemini API key
-genai.configure(api_key="AIzaSyBW0FGG-5hw41OV-XFniCfkscT3lqIcJ0w")  # Replace with your actual API key
+genai.configure(api_key=st.secrets['GOOGLE_API_KEY']['GOOGLE_API_KEY']) # Replace with your actual API key 
 model = genai.GenerativeModel("gemini-1.5-flash") # Load Model
 
 # Get user input
